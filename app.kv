@@ -1,0 +1,82 @@
+<BarberShop>:
+Screen:
+    BoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title: 'DG Barbershop'
+            left_action_items: [['menu', lambda x: x]]
+            right_action_items: [['magnify', lambda x: x]]
+        LoginScreen:
+
+<SenhaCard>:
+    id: card
+    orientation: 'vertical'
+    size_hint: .7, .7
+    pos_hint: {'center_x':.5, 'center_y':.5}
+
+    MDBoxLayout:
+        size_hint_y: .2
+        padding: [25, 0, 25, 0]
+        md_bg_color: app.theme_cls.primary_color
+
+        MDLabel:
+            text: 'Alterar Senha:'
+            theme_text_color: 'Custom'
+            text_color: 1, 1, 1, 1
+            font_size: 20
+        MDIconButton:
+            icon: 'close-outline'
+            theme_text_color: 'Custom'
+            text_color: 1, 1, 1, 1
+            on_release: root.fechar_card()
+
+    MDFloatLayout:
+        MDTextField:
+            pos_hint: {'center_x':.5, 'center_y':.8}
+            size_hint_x: .6
+            hint_text: 'Código Recebido por Email'
+        MDTextField:
+            pos_hint: {'center_x':.5, 'center_y':.6}
+            size_hint_x: .6
+            hint_text: 'Nova Senha'
+        MDTextField:
+            pos_hint: {'center_x':.5, 'center_y':.4}
+            size_hint_x: .6
+            hint_text: 'Confirme a Senha'
+        ButtonFocus:
+            pos_hint: {'center_x':.5, 'center_y':.2}
+            size_hint_x: .5
+            text: 'Atualizar Senha'
+            focus_color: app.theme_cls.accent_color
+            unfocus_color: app.theme_cls.primary_color
+
+<LoginScreen>:
+    MDIconButton:
+        icon: 'account'
+        color: app.theme_cls.primary_color
+        user_font_size: '100sp'
+        pos_hint: {'center_x':.5, 'center_y':.8}
+    MDTextField:
+        hint_text: 'E-mail'
+        pos_hint: {'center_x': .5, 'center_y': .6}
+        size_hint_x: .6
+    MDTextField:
+        hint_text: 'Senha'
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        size_hint_x: .6
+    ButtonFocus:
+        text: 'Login'
+        size_hint_x: .6
+        center_x: .5
+        pos_hint: {'center_x': .5, 'center_y': .3}
+        focus_color: app.theme_cls.accent_color
+        unfocus_color: app.theme_cls.primary_color
+    MDLabel:
+        text: 'Esqueceu sua senha?'
+        halign: 'center'
+        pos_hint: {'center_y': .2}
+    MDTextButton:
+        text: 'Clique Aqui!'
+        color: 'brown'
+        pos_hint: {'center_x':.5, 'center_y':.15}
+        on_release: root.abrir_card()
