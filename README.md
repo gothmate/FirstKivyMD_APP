@@ -1,3 +1,3 @@
 # FirstKivyMD_APP
 
-![app](..\kivy_test\img\app.png)
+![app](..\FirstKivyMD_APP\img\app.png)
