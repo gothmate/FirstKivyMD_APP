@@ -1,3 +1,3 @@
 # FirstKivyMD_APP
 
-![app](..\FirstKivyMD_APP\img\app.png)
+<img src="https://github.com/gothmate/FirstKivyMD_APP/blob/main/img/app.png?raw=true">
